@@ -20,9 +20,8 @@
 
 	<link type="text/css" href="https://fonts.googleapis.com/css?family=Lobster|Montserrat|Raleway" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-
-	<link rel="shortcut icon" href="{% static 'images/logo.ico' %}" />
-	<title>Web Developer</title>
+	<link rel="shortcut icon" href="{% static 'images/logo.png' %}" />
+	<title>Software Engineer</title>
 
 	<!-- CSS -->
 	<link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
@@ -48,9 +47,9 @@
 	<section id="home" class="pfblock-image screen-height">
     <div class="home-overlay"></div>
 		<div class="intro">
-			<div class="start">Hello, my name is Vlad Moroshan and I am</div>
-			<h1>Full-Stack Web Developer</h1>
-			<div class="start">creating modern and responsive Web Application</div>
+			<div class="start">Hello, my name is Nathaniel Wihardjo and I am</div>
+			<h1>Software Engineer</h1>
+			<div class="start">trying to figure things out</div>
 		</div>
 
 		<a href="#services">
@@ -79,15 +78,22 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">Nathaniel Wihardjo</a>
-				</div>
-
-				<div class="collapse navbar-collapse" id="custom-collapse">
-					<ul class="nav navbar-nav navbar-right">
+					<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-left">
 						<li><a href="#home">Home</a></li>
 						<li><a href="#services">About me</a></li>
-            <li><a href="#portfolio">Works</a></li>
+						<li><a href="#portfolio">Projects</a></li>
 						<li><a href="#contact">Contact</a></li>
+					</ul>
+					</div>
+				</div>
+
+				<div class ="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a class="fa fa-linkedin" href="https://www.linkedin.com/in/wihardjo-nathaniel/" target="_blank"></a></li>
+						<li><a class="fa fa-github" href="https://github.com/nwihardjo/" target="_blank"></a></li>
+            					<li><a class="fa fa-envelope" href="mailto:wihardjo.nathaniel@gmail.com" ></a></li>
+						<li><a class="fa fa-pen-square" href="{% static 'files/Nathaniel_Wihardjo_CV.pdf' %}" target="_blank">CV</a></li>
 					</ul>
 				</div>
 
@@ -116,14 +122,14 @@
 							<p>Programming is a true passion of mine and that passion continually grows with every meaningful tech-related conversation I have, with every moment of clarity as I finally figure out a nagging issue on a project, and with every new concept, language, or framework I delve into.</p>
 							<p>I enjoy the collaborative nature of working on a team building a product. The feedback, discussion, and review in this environment brings out the best in each individual member, and is a crucial component in my own personal development. I'm ready to jump onto a supportive team and begin contributing.</p>
 
- 							<a href="https://drive.google.com/file/d/0B4mqctkjXG0iclRXd2JJMGtYZFE/view?usp=sharing" target="_blank" id="resume-effect"><i class="fa fa-3x fa-file-text-o" aria-hidden="true"></i> Click to view my resume.</a>
+ 							<a href="{% static 'files/Nathaniel_Wihardjo_CV.pdf' %}"  target="_blank" id="resume-effect"><i class="fa fa-3x fa-file-text-o" aria-hidden="true"></i>  Click to view my resumé</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-sm-4">
 					<div class="pfblock-header wow fadeInUp">
-						<img id="myphoto" src="{% static 'images/me.jpg' %}" alt="Vladislav Moroshan" style="border-radius: 100%;filter:grayscale(30%);">
+						<img id="myphoto" src="{% static 'images/me.png' %}" alt="Nathaniel Wihardjo" style="border-radius: 100%;filter:grayscale(30%);">
 					</div>
 				</div>
 		</div><!-- .container -->
@@ -133,18 +139,17 @@
 				<div class="pfblock-line"></div>
 
 				<div class="row">
-					<div  class="devicon-html5-plain  col-xs-15"><span>HTML</span></div>
-					<div  class="devicon-css3-plain   col-xs-15"><span>CSS</span></div>
-					<div  class="devicon-bootstrap-plain col-xs-15"><span>BOOTSTRAP</span></div>
-					<div  class="devicon-jquery-plain col-xs-15"><span>JQUERY</span></div>
-					<div  class="devicon-javascript-plain  col-xs-15"><span>JAVASCRIPT</span></div>
-				</div>
-				<div class="row">
-					<div  class="devicon-d3js-plain  col-xs-15"><span>D3</span></div>
-					<div  class="devicon-react-original  col-xs-15"><span>REACT</span></div>
-					<div  class="devicon-nodejs-plain  col-xs-15"><span>NODE</span></div>
 					<div  class="devicon-python-plain  col-xs-15"><span>PYTHON</span></div>
 					<div  class="devicon-django-plain  col-xs-15"><span>DJANGO</span></div>
+					<div  class="devicon-git-plain col-xs-15"><span>GIT</span></div>
+					<div  class="devicon-cplusplus-plain col-xs-15"><span>C++</span></div>
+					<div  class="devicon-go-plain col-xs-15"><span>GO</span></div>
+					<div  class="devicon-java-plain col-xs-15"><span>JAVA</span></div>
+					<div  class="devicon-linux-plain col-xs-15"><span>LINUX</span></div>
+					<div  class="devicon-vim-plain  col-xs-15"><span>VIM</span></div>
+					<div  class="devicon-mysql-plain  col-xs-15"><span>SQL</span></div>
+					<div  class="devicon-confluence-plain  col-xs-15"><span>CONFLUENCE</span></div>
+					<div  class="devicon-bootstrap-plain  col-xs-15"><span>BOOTSTRAP</span></div>
 				</div>
 
 			</div>

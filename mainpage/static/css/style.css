@@ -229,11 +229,13 @@ input:nth-child(3n){
 /* ---------------------------------------------- */
 
 .pfblock {
+	background: #222;
 	padding: 120px 0 100px;
 }
 
 .pfblock-gray {
-	background: #f5f5f5;
+	background: #222;
+	border-color: #080808;
 }
 
 .pfblock-image {
@@ -272,7 +274,8 @@ input:nth-child(3n){
 
 .pfblock-title{
 	text-align: center;
-    font-weight: 800;
+	font-weight: 800;
+	color: rgba(400, 400, 400, 0.88);
 }
 
 .pfblock-subtitle {
@@ -280,6 +283,7 @@ input:nth-child(3n){
 	font-family: Raleway, "Times New Roman", Times, sans-serif;
 	font-style: normal;
 	font-size: 18px;
+	color: rgba(400,400,400, 0.7);
 }
 
 .pfblock-line {
@@ -303,9 +307,9 @@ input:nth-child(3n){
 
 div[class^="devicon"] {
 	display: block;
-	color: #333333;
+	color: lightgray;
 	font-size: 80px;
-    margin:  2vh auto 2vh auto;
+	margin:  2vh auto 2vh auto;
 	text-align: center;
 }
 
@@ -407,7 +411,7 @@ div[class^="devicon"] span{
     background-color: rgba(44, 62, 80, 0.3);
     background-image: url("../images/pattern.png");
     background-repeat: repeat;
-    height: 100%;
+    height: 100.1%;
     left: 0;
     position: absolute;
     top: 0;
@@ -510,7 +514,7 @@ div[class^="devicon"] span{
 /* ---------------------------------------------- */
 
 .header {
-	border-bottom: 1px solid #f5f5f5;
+	border-bottom: 0px solid #f5f5f5;
 	position: relative;
 	width: 100%;
 	z-index: 998;
@@ -526,7 +530,7 @@ div[class^="devicon"] span{
 
 .navbar-custom,
 .navbar-custom .dropdown-menu {
-	background: #fff;
+	background: #222;
 	padding: 0;
 }
 
@@ -535,7 +539,7 @@ div[class^="devicon"] span{
 .navbar-custom .navbar-nav .dropdown-menu > li > a {
 	font-size: 11px;
 	letter-spacing: 3px;
-	color: #222;
+	color: white;
 }
 
 .navbar-custom .nav li.active,
@@ -570,7 +574,7 @@ div[class^="devicon"] span{
 }
 
 .navbar-custom .navbar-toggle .icon-bar {
-	background: #222;
+	background: lightgrey;
 }
 
 /* ---------------------------------------------- /*
