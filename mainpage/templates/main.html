@@ -78,6 +78,9 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
+					<a class="navbar-brand" href="#home">NW</a>
+				</div>
+
 					<div class="collapse navbar-collapse" id="custom-collapse">
 					<ul class="nav navbar-nav navbar-left">
 						<li><a href="#home">Home</a></li>
@@ -85,44 +88,34 @@
 						<li><a href="#portfolio">Projects</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
-					</div>
-				</div>
-
-				<div class ="collapse navbar-collapse" id="custom-collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a class="fa fa-linkedin" href="https://www.linkedin.com/in/wihardjo-nathaniel/" target="_blank"></a></li>
 						<li><a class="fa fa-github" href="https://github.com/nwihardjo/" target="_blank"></a></li>
             					<li><a class="fa fa-envelope" href="mailto:wihardjo.nathaniel@gmail.com" ></a></li>
 						<li><a class="fa fa-pen-square" href="{% static 'files/Nathaniel_Wihardjo_CV.pdf' %}" target="_blank">CV</a></li>
 					</ul>
+					</div>
 				</div>
-
 			</div><!-- .container -->
-
 		</nav>
-
 	</header>
 
 	<!-- Navigation end -->
-
 
   <!-- Services start -->
 
 	<section id="services" class="pfblock pfblock-gray">
 		<div class="container">
 			<div class="row">
-
 				<div class="col-sm-8">
-
 					<div class="pfblock-header wow fadeInUp">
 						<h2 class="pfblock-title">ABOUT ME</h2>
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
-							<p>I enjoy building everything from small business sites and landing pages to portfolio themes and rich interactive web apps. I love creating visually stunning and responsive websites. I always try to combine aesthetic with functional aspects, looking for the right balance to communicate without annoying.</p>
-							<p>Programming is a true passion of mine and that passion continually grows with every meaningful tech-related conversation I have, with every moment of clarity as I finally figure out a nagging issue on a project, and with every new concept, language, or framework I delve into.</p>
-							<p>I enjoy the collaborative nature of working on a team building a product. The feedback, discussion, and review in this environment brings out the best in each individual member, and is a crucial component in my own personal development. I'm ready to jump onto a supportive team and begin contributing.</p>
-
- 							<a href="{% static 'files/Nathaniel_Wihardjo_CV.pdf' %}"  target="_blank" id="resume-effect"><i class="fa fa-3x fa-file-text-o" aria-hidden="true"></i>  Click to view my resumé</a>
+							<p>I enjoy building apps and learning new technology. I just graduated from Hong Kong University of Science and Technology, and soon will be moving to London. I am currently learning on different stacks of framework particularly in the area of distributed framework, machine learning, and anything really. </p>
+							<p> Here is the what I'm based on currently:</p>
+							<!--<p>Programming is a true passion of mine and that passion continually grows with every meaningful tech-related conversation I have, with every moment of clarity as I finally figure out a nagging issue on a project, and with every new concept, language, or framework I delve into.</p>-->
+						<iframe class="map" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=hong%20kong&key=AIzaSyCarw29wthNgU4O-vagJaG2Di025YatNKU" allowfullscreen></iframe> 
 						</div>
 					</div>
 				</div>
@@ -130,10 +123,11 @@
 				<div class="col-sm-4">
 					<div class="pfblock-header wow fadeInUp">
 						<img id="myphoto" src="{% static 'images/me.png' %}" alt="Nathaniel Wihardjo" style="border-radius: 100%;filter:grayscale(30%);">
-					</div>
 				</div>
+
+
 		</div><!-- .container -->
-		
+
 		<div class="skills col-xs-12">
 				<h2 class="pfblock-title">MY SKILLS</h2>
 				<div class="pfblock-line"></div>
@@ -144,11 +138,15 @@
 					<div  class="devicon-git-plain col-xs-15"><span>GIT</span></div>
 					<div  class="devicon-cplusplus-plain col-xs-15"><span>C++</span></div>
 					<div  class="devicon-go-plain col-xs-15"><span>GO</span></div>
+				</div>
+				<div class="row">
 					<div  class="devicon-java-plain col-xs-15"><span>JAVA</span></div>
 					<div  class="devicon-linux-plain col-xs-15"><span>LINUX</span></div>
 					<div  class="devicon-vim-plain  col-xs-15"><span>VIM</span></div>
 					<div  class="devicon-mysql-plain  col-xs-15"><span>SQL</span></div>
 					<div  class="devicon-confluence-plain  col-xs-15"><span>CONFLUENCE</span></div>
+				</div>
+				<div class="row">
 					<div  class="devicon-bootstrap-plain  col-xs-15"><span>BOOTSTRAP</span></div>
 				</div>
 
@@ -158,15 +156,12 @@
 
 	<!-- Services end -->
 
-
 	<!-- Portfolio start -->
 
 	<section id="portfolio" class="pfblock">
 		<div class="container">
 			<div class="row">
-
 				<div class="col-sm-6 col-sm-offset-3">
-
 					<div class="pfblock-header wow fadeInUp">
 						<h2 class="pfblock-title">My works</h2>
 						<div class="pfblock-line"></div>
@@ -174,30 +169,34 @@
 
 						</div>
 					</div>
-
 				</div>
-
 			</div><!-- .row -->
-
 			<div class="row">
 				{% for project in projects %}
-					<div class="card col-xs-12 col-sm-5 col-md-5">
+				<div class="col-md-4 col-sm-4 col-xs-12 d-flex align-items-stretch">
+					<div class="card">
 							<div class="grid wow zoomIn">
-							<!-- TODO: ADD URL FOR EACH PROJECT --!>
-								<figure class="effect-bubba"><a href="https://www.google.com" target="_blank">
-											<img class="card-img-top" src="{% static project.image %}"></a>
+								<figure class="effect-bubba"><a href={{project.url}} target="_blank">
+									<img class="card-img-top" src="{% static project.image %}"></a>
 								</figure>
 
 								<div class="card-block">
-									<h2 class="card-title">{{ project.title }}</h2>
-									<p class="card-text">{{ project.description }}</p>
+									<h2 class="card-title">{{project.title}}</h2>
+									<h3 class="card-subtitle text-semiwhite">{{project.role}}</h3>
+									<h4 class="card-subtitle text-semiwhite">
+										{{project.start_date|date:'F'}} {{project.start_date.year}} - {{project.end_date|date:'F'}} {{project.end_date.year}}
+									</h4>	
+									<p class="card-text">{{project.description}}</p>
+									{% for tech in project.technology.all %}
 									<div class="tools">
-									<!-- use \<span\> --!>
+										<span>{{tech}}</span>
 									</div>
+									{% endfor %}
 								</div>
 
 							</div>
 						</div>
+					</div>
 					{% endfor %}
 				</div>
 		</div><!-- .contaier -->
@@ -264,22 +263,12 @@
 
 	<!-- Footer start -->
 
-	<footer id="footer">
+	<footer id="footer" class="calltoaction">
 		<div class="container">
 			<div class="row">
-
 				<div class="col-sm-12">
-
-					<ul class="social-links">
-						<li><a href="https://www.linkedin.com/in/vlad-moroshan-266229129?trk=nav_responsive_tab_profile" class="wow fadeInUp" data-wow-delay=".1s" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="https://github.com/VladislavMoroshan" class="wow fadeInUp" data-wow-delay=".2s" target="_blank"><i class="fa fa-github"></i></a></li>
-						<li><a href="mailto:vlad.moroshan@gmail.com" class="wow fadeInUp" data-wow-delay=".4s"><i class="fa fa-envelope"></i></a></li>
-						<li><a href="skype:moroshan777?chat" class="wow fadeInUp" data-wow-delay=".5s" target="_blank"><i class="fa fa fa-skype"></i></a></li>
-					</ul>
-
-					<p class="copyright"> Feel free to email me, or visit my GitHub and LinkedIn pages.</p>
-
-					<p class="heart">Made with <span class="fa fa-heart fa-2x animated pulse"></span> Ukraine 2017 ©</p>
+					<p class="calltoaction-footer wow"> <strong> © 2019 Nathaniel Wihardjo </strong></p>
+					<p class="calltoaction-footer wow"> <strong> Theme by: <a href="https://github.com/VladislavMoroshan/Django-personal-website">Vladislav</a></strong></p>
 
 				</div>
 
