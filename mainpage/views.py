@@ -2,15 +2,6 @@ from django.shortcuts import render
 from mainpage.models import Project, Technology
 from . import forms
 from django.core.mail import send_mail
-
-
-from django.views.generic import ListView
-from django.views.generic.edit import FormView
-from django.contrib.messages.views import SuccessMessageMixin
-
-from django.core.mail import get_connection
-from django.conf import settings
-
 from .forms import ContactForm
 
 def ProjectListAndFormView(request):
@@ -24,7 +15,14 @@ def ProjectListAndFormView(request):
 			sender_email = form.cleaned_data['email']
 
 			message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
-			send_mail('New Enquiry', message, sender_email, ['wihardjo.nathaniel@gmail.com'], fail_silently=False)
+
+			send_mail(
+				'New Enquiry from Website', 
+				message, 
+				sender_email, 
+				['wihardjo.nathaniel@gmail.com'], 
+				fail_silently=False
+			)
 
 	context = {
 		'projects': projects,

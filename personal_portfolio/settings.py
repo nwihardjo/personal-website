@@ -14,6 +14,7 @@ import django_heroku
 import os
 import dj_database_url
 import dotenv
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,12 +27,12 @@ if os.path.isfile(DOTENV_FILE):
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ogp1f2jcy7^d7*2v8$)^y!-p=9!q5nhw#)8tnpapi^mt+803ec'
+SECRET_KEY = config('SECRET_KEY')
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -86,19 +87,6 @@ WSGI_APPLICATION = 'personal_portfolio.wsgi.application'
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
-'''
-DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.postgresql',
-		'NAME': 'portfolio', 
-		'USER': 'postgres', 
-		'PASSWORD': 'postgres', 
-		'HOST': '', 
-		'PORT': ''
-	}
-}
-'''
-
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -143,7 +131,16 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # For sending emails
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' 
+SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY') 
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
 
 django_heroku.settings(locals())
 
