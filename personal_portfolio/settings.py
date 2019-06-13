@@ -86,6 +86,18 @@ WSGI_APPLICATION = 'personal_portfolio.wsgi.application'
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
+'''
+DATABASES = {
+	'default': {
+		'ENGINE': 'django.db.backends.postgresql',
+		'NAME': 'portfolio', 
+		'USER': 'postgres', 
+		'PASSWORD': 'postgres', 
+		'HOST': '', 
+		'PORT': ''
+	}
+}
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
