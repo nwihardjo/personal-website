@@ -7,4 +7,4 @@ release:
     - python manage.py loaddata datadump.json
     - python manage.py migrate
 run:
-        web: python manage.py runserver 0.0.0.0:$PORT
+        web: gunicorn personal_portfolio.wsgi --log-file -
