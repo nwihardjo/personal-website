@@ -34,8 +34,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['http://nwihardjo.herokuapp.com']
 
 # Application definition
 
