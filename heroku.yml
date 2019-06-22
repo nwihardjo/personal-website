@@ -1,5 +1,13 @@
+setup:
+        addons:
+                - plan: heroku-postgresql
+                as: DATABASE
 build:
         docker:
                 web: Dockerfile
+release:
+        command:
+                - python manage.py loaddata datadump.json
+                - python manage.py migrate
 run:
         web: python manage.py runserver
