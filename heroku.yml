@@ -2,6 +2,7 @@ build:
   docker:
     web: Dockerfile
 release:
+  image: web
   command:
     - python manage.py loaddata datadump.json
     - python manage.py migrate
