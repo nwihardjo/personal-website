@@ -47,7 +47,7 @@
 	<section id="home" class="pfblock-image screen-height">
     <div class="home-overlay"></div>
 		<div class="intro">
-			<div class="start">Hello, my name is Nathaniel Wihardjo and I am</div>
+			<div class="start">Hello, my name is Nathaniel Wihardjo and I am a</div>
 			<h1>Software Engineer</h1>
 			<div class="start">trying to figure things out</div>
 		</div>
@@ -112,10 +112,10 @@
 						<h2 class="pfblock-title">ABOUT ME</h2>
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
-							<p>I enjoy building apps and learning new technology. I just graduated from Hong Kong University of Science and Technology, and soon will be moving to London. I am currently learning on different stacks of framework particularly in the area of distributed framework, machine learning, and anything really. </p>
-							<p> Here is the what I'm based on currently:</p>
+							<p>I enjoy building apps and learning new technology. Currently residing in London - I am currently learning on different stacks of framework particularly in the area of distributed framework, machine learning, and backend stuff. </p>
+							<p>Here is the what I'm based on currently:</p>
 							<!--<p>Programming is a true passion of mine and that passion continually grows with every meaningful tech-related conversation I have, with every moment of clarity as I finally figure out a nagging issue on a project, and with every new concept, language, or framework I delve into.</p>-->
-						<iframe class="map" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=hong%20kong&key=AIzaSyCarw29wthNgU4O-vagJaG2Di025YatNKU" allowfullscreen></iframe> 
+						<iframe class="map" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX4XfTlUDdkgRwISR0ciFEQo&key=AIzaSyCarw29wthNgU4O-vagJaG2Di025YatNKU" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
@@ -185,7 +185,7 @@
 									<h3 class="card-subtitle text-semiwhite">{{project.role}}</h3>
 									<h4 class="card-subtitle text-semiwhite">
 										{{project.start_date|date:'F'}} {{project.start_date.year}} - {{project.end_date|date:'F'}} {{project.end_date.year}}
-									</h4>	
+									</h4>
 									<p class="card-text">{{project.description}}</p>
 									{% for tech in project.technology.all %}
 									<div class="tools">
